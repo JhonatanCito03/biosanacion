@@ -1,0 +1,100 @@
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: #3c3936;
+  overflow: hidden;
+}
+
+.main-text {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+  animation: pulseGlow 4s ease-in-out infinite alternate;
+}
+
+.sub-text {
+  margin-top: 1rem;
+  font-family: "Playfair Display", serif;
+  opacity: 0.85;
+}
+
+/* soft aura pulse */
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 15px rgba(255,255,255,0.5);
+  }
+  100% {
+    text-shadow: 0 0 35px rgba(255,255,255,0.9);
+  }
+}
+
+
+.button-contained {
+  margin-top: 1.5rem;
+  padding: 0.9rem 2.8rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f7f7f7;
+  background-color: #445a67;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button-contained:hover {
+  background-color: #506b78;
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+
+.button-contained {
+  min-width: 200px;
+  text-align: center;
+}
+
+.social-media{
+  position: absolute;
+  bottom: 10px;
+}
+
+.social-icon1{
+  margin-left: 10px;
+}
+
+.social-icon1:hover{
+  margin-top: -4px;
+  filter: blur(0.7px);
+}
+
+
+.social-icon2{
+  margin-left: 10px;
+}
+
+.social-icon2:hover{
+  margin-top: -4px;
+  filter: blur(0.7px);
+}
+.social-icon3{
+  margin-left: 10px;
+}
+
+.social-icon3:hover{
+  margin-top: -4px;
+  filter: blur(0.7px);
+}
+
+@media (max-width: 700px) {
+  .Typography{
+    color: #506b78;
+  }
+}
