@@ -97,7 +97,6 @@ export default function MainPage(){
             <SocialIcon className='social-icon2' url="https://www.instagram.com/jhon_aristizabal_oficial/" style={{ height: 40, width: 40 }} target='_blank' rel="noopener noreferrer"/>
             <SocialIcon className='social-icon3' url="https://www.tiktok.com/@jhonaristizabal40?is_from_webapp=1&sender_device=pc" style={{ height: 40, width: 40 }} target='_blank' rel="noopener noreferrer"/>
             <SocialIcon className='social-icon3' url="https://www.facebook.com/tubiosanacion" style={{ height: 40, width: 40 }} target='_blank' rel="noopener noreferrer"/>
-            <SocialIcon className='social-icon3' url="https://www.linkedin.com" style={{ height: 40, width: 40 }} target='_blank' rel="noopener noreferrer"/>
         </Container>
 
         </Container>
