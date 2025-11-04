@@ -1,11 +1,21 @@
 import MainPage from './Components/MainPage/MainPage.jsx'
-import TextDec from './Components/Login/textDec.jsx'
+import {lenis} from './lenis.js';
+import { useEffect } from 'react';
 
-export default function App(){
-  return(
+function App() {
+  useEffect(() => {
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
+
+  return (
     <>
-    <MainPage/>
+      {<MainPage/>}
     </>
-    
   );
 }
+
+export default App;

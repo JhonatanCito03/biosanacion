@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
-.momo-trust-display-regular {
-  font-family: "Momo Trust Display", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 .playfair-display {
   font-family: "Playfair Display", serif;
@@ -14,6 +7,13 @@
   font-style: normal;
 }
 
-*{
+body, *{
+    
+  font-family: "Playfair Display", serif !important;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  color: #3c3936;
   background-color: #f1eae0;
+
 }

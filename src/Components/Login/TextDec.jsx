@@ -1,4 +1,5 @@
 import {Container, Typography} from '@mui/material';
+import './TextDec.css'
 
 
 export default function TextDec(){

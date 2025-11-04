@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
 import {Container, Typography, styled, Button, Stack} from '@mui/material';
 import './MainPage.css';
+import {useNavigate} from 'react-router-dom'
 
 
 
@@ -64,6 +65,12 @@ export default function MainPage(){
 
     const [hovered, setHovered] = useState(false);
 
+    const navigate = useNavigate();
+
+    const handleClick = (value) => {
+        console.log(`Redirected to ${value}`);
+        navigate(value);
+    }
 
     return(
     <Container sx={{height:'100vh'}}>
@@ -83,11 +90,11 @@ export default function MainPage(){
             >
                 BIOSANACIÓN
             </Typography>
-            <Typography variant='h6' fontFamily={'Playfair Display, serif'} className='sub-text'>
+            <Typography variant='h6' className='sub-text'>
                 Donde te reencontrarás contigo mismo.
             </Typography>
             
-            <button className='button-contained' onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onClick={() => window.location.href = {TextDec}}>
+            <button className='button-contained' onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onClick={() => handleClick("/textdec")}>
                 {hovered ? "Descubre más" : "Explorar"}
             </button>
 
