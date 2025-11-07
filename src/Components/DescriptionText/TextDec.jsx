@@ -35,7 +35,6 @@ export default function TextDec(){
         {
             opacity: 0,
             scale: 0.8,
-            opacity: 0,
             duration: 1,
         }, 
         {
@@ -59,7 +58,7 @@ export default function TextDec(){
 
 
     return(
-        <Container>
+        <Container className='container-desc'>
             <Typography variant='h2' className='text-desc'>
                 Bienvenido a BioSanación.
             </Typography>
