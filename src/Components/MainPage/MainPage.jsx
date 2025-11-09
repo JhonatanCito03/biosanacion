@@ -23,7 +23,6 @@ export default function MainPage(){
             filter: "blur(6px)",
         })
         .to(".main-text", {
-            textShadow: "0 0 25px rgba(255,255,255,0.8), 0 0 60px rgba(255,255,255,0.6)",
             duration: 1.5,
             ease: "power2.inOut",
             }, "-=0.5")
@@ -75,6 +74,7 @@ export default function MainPage(){
     return(
     <Container sx={{height:'100vh'}}>
         <Container className='text-container'>
+            <container className="only-text">
             <Typography 
             variant='h1'
             fontFamily={'Playfair Display, serif'} 
@@ -98,16 +98,14 @@ export default function MainPage(){
                 {hovered ? "Descubre más" : "Explorar"}
             </button>
 
-
+            </container>
         <Container className='social-media'>
             <SocialIcon className='social-icon1' url="https://www.youtube.com/@jhonristy" style={{ height: 40, width: 40 }} target='_blank' rel="noopener noreferrer"/>
             <SocialIcon className='social-icon2' url="https://www.instagram.com/jhon_aristizabal_oficial/" style={{ height: 40, width: 40 }} target='_blank' rel="noopener noreferrer"/>
             <SocialIcon className='social-icon3' url="https://www.tiktok.com/@jhonaristizabal40?is_from_webapp=1&sender_device=pc" style={{ height: 40, width: 40 }} target='_blank' rel="noopener noreferrer"/>
             <SocialIcon className='social-icon3' url="https://www.facebook.com/tubiosanacion" style={{ height: 40, width: 40 }} target='_blank' rel="noopener noreferrer"/>
         </Container>
-
         </Container>
-        
     </Container>
 
     

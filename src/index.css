@@ -7,13 +7,12 @@
   font-style: normal;
 }
 
-body, *{
-    
-  font-family: "Playfair Display", serif !important;
-  font-weight: 400;
+body {
   margin: 0;
   padding: 0;
-  color: #3c3936;
-  /*background-color: #f4eee5 ;*/
-
+  background: radial-gradient(circle at 15% 20%, #B3FFF9 0%, #4DD6D6 40%, #007C91 90%);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
 }

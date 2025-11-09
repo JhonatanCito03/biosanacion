@@ -5,23 +5,36 @@
   align-items: center;
   height: 100vh;
   text-align: center;
-  color: #3c3936;
   overflow: hidden;
+}
+.only-text{
+  background: rgba(25, 26, 26, 0.4);
+  backdrop-filter: blur(18px);
+  border-radius: 25px;
+  padding: 50px 70px;
+  text-align: center;
+  color: #EAF6F6;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.only-text:hover{
+  background: rgba(45, 64, 74, 0.4);
+  transform: scale(1.02);
 }
 
 .main-text {
-  font-family: "Playfair Display", serif;
-  letter-spacing: 3px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(255,255,255,0.3);
-  animation: pulseGlow 4s ease-in-out infinite alternate;
+  
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: #FFFFFF;
+
 }
 
 .sub-text {
-  margin-top: 1rem;
-  font-family: "Playfair Display", serif;
-  opacity: 0.85;
+  font-size: 1.2rem;
+  color: #EAF6F6;
+  margin-bottom: 25px;
 }
 
 /* soft aura pulse */
@@ -36,23 +49,21 @@
 
 
 .button-contained {
-  margin-top: 1.5rem;
-  padding: 0.9rem 2.8rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #f7f7f7;
-  background-color: #445a67;
+  background-color: rgba(0, 63, 92, 0.8);
+  color: #EAF6F6;
   border: none;
-  border-radius: 40px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.2s;
+  margin-top: 20px;
 }
 
 .button-contained:hover {
-  background-color: #506b78;
-  transform: translateY(-6px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 63, 92, 1);
+  transform: scale(1.05);
 }
 
 

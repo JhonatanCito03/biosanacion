@@ -1,7 +1,6 @@
 .text-desc {
   font-family: "Playfair Display", serif;   
   text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(255,255,255,0.3);
   animation: pulseGlow 4s ease-in-out infinite alternate;
   font-size: 20px;
   text-align: center;
@@ -11,18 +10,16 @@
   margin-top: 1rem;
   font-family: "Playfair Display", serif;
   opacity: 0.85;
-  max-width: 500px;
+  max-width: 700px;
   font-size: 20px;
 }
 
-.desc1:hover{
-  text-shadow: 1px 0px 0px rgba(250, 174, 133, 0.6);
-}
-
 .image-logo1{
-  width: 500px;
-  height: 500px;
+  width: 300px;
+  height: 300px;
   margin-left: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .sub-text-desc{
@@ -33,3 +30,4 @@
 .container-desc{
   margin-top: 20px;
 }
+
