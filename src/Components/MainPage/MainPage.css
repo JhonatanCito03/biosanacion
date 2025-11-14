@@ -14,11 +14,11 @@
   padding: 50px 70px;
   text-align: center;
   color: #EAF6F6;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(102, 101, 101, 0.3);
 }
 
 .only-text:hover{
-  background: rgba(45, 64, 74, 0.4);
+  background: rgba(21, 29, 34, 0.4);
   transform: scale(1.02);
 }
 
