@@ -12,9 +12,11 @@ function App() {
   }, []);
 
   return (
-    <>
-      {<MainPage/>}
-    </>
+    <div className='App'>
+      <>
+      <MainPage/>
+      </>
+    </div>
   );
 }
 

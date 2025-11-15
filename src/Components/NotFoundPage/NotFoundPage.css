@@ -1,6 +1,5 @@
 .notfound-container {
   height: 100vh;
-  background: linear-gradient(135deg, #fef9d9, #ffffff);  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,7 +23,7 @@
 .notfound-container button {
   padding: 1rem 2rem;
   font-size: 1.2rem;
-  background: #898f8f;
+  background: #007c8c;
   border: none;
   border-radius: 50px;
   color: #fff;
