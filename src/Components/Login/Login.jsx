@@ -1,30 +1,39 @@
-import React, {useState} from 'react'
+import { Link } from "react-router-dom";
+import { Typography } from '@mui/material';
+import { useNavigate } from "react-router-dom"; //pruebas 1
 
-import './Login.css'
+import React, {useState, useEffect} from "react";
 
-export default function Login(){
+export default function Login({name, isLogged, password}){
 
-    const email = document.getElementById('correo')
-    const name = document.getElementById('correo')
+    let [userName,setName] = useState(name)
+    const navigate = useNavigate(); //validate
 
-    function onPress(){
-        console.log(email, name)
+      useEffect(() => {
+    if (!isLogged) {
+      navigate("/");
+      return(alert("No estas logueado"))
+    }
+    }, [!isLogged, navigate]);
+
+    function onChangeName(e){
+        userName = e.target.value
+        console.log(e)
     }
 
-    return(
-    <div className='form-container'>
-        <div class="mb-3" >
-        <label for="exampleFormControlInput1" class="form-label" id='name'>Su Nombre</label>
-        <input type="name" class="form-control" id="exampleFormControlInput1"/>
-        </div>
 
+    if(isLogged){
+        return(
+            <div className="login">
+                <Typography variant="h4">
+                Bienvenidx {name}, 
+                isLogged {isLogged ? "Si, esta logueado y puede ver el mensaje" : ""},
+                password {password},
+                </Typography>
 
-        <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label" id='correo'>Su correo</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
-        </div>
-
-        <button type="button" class="btn btn-success" onClick={onPress}>Subir info</button>
-
-    </div>)
+                <input type="text" placeholder="ingrese el nombre" onChange={onChangeName}/>
+            </div>
+            
+        );
+    }
 }
