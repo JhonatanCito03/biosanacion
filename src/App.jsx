@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from './Components/MainPage/MainPage.jsx';
 import About from './Components/About/About.jsx';
 import Login from './Components/Login/Login.jsx';
+import Register from './Components/Register/Register.jsx';
 
 import { lenis } from './lenis';
 import UserData from '../userData.json';
@@ -23,7 +24,8 @@ function App() {
     <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/about" element={<About />} />
-      <Route path="/login" element={<Login name={UserData.name} isLogged={UserData.isLogged} password={UserData.password}/>} />
+      <Route path="/login" element={<Login name={UserData.name} email={UserData.email} isLogged={UserData.isLogged} password={UserData.password}/>} />
+      <Route path="/register" element={<Register/>} />
     </Routes>
   );
 }

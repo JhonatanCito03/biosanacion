@@ -1,20 +1,70 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { SocialIcon } from 'react-social-icons'
 import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
 import {Container, Typography, styled, Button, Stack} from '@mui/material';
 import './MainPage.css';
 import {useNavigate} from 'react-router-dom'
+import Swal from "sweetalert2";
+import UserData from '../../../userData.json'
 
 
 
 
 export default function MainPage(){
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+    if (!UserData.isLogged) {
+      navigate("/");
+ 
+        //this is the main alert if user's not logged
+        Swal.fire({
+            title: "<strong>Se recomienda iniciar sesion</strong>",
+            icon: "info",
+            html: `
+                Es recomendable <b>iniciar sesion</b>
+                para una mejor experiencia.
+            `,
+            showCloseButton: true,
+            showCancelButton: true,
+            focusConfirm: false,
+            confirmButtonText: `
+                <i class="fa fa-thumbs-up"></i> Crear usuario! 
+            `,
+            cancelButtonText: `
+                <i class="fa fa-thumbs-down"></i>Iniciar sesion
+            `
+        }).then((result) => {
+            if(result.isConfirmed){
+                //SignIn
+                window.location.href = '/register'
+            }else if(result.dismiss === Swal.DismissReason.cancel){
+                //Login
+                window.location.href = '/login'
+            }
+        })
+
+
+    }else{
+        return(
+            Swal.fire({
+            title: `Bienvenid@ ${UserData.name}`,
+            icon: "Sesion iniciada correctamente",
+            draggable: true
+            })
+        )
+    }
+
+    }, [!UserData.isLogged, navigate]);
+
+
+
     useGSAP(() => {
         const tl = gsap.timeline({ defaults: {ease: "power3.out", duration: 1}});
         
         //siguiente
-
         tl.from(".main-text", {
             y: 60,
             opacity: 0,
@@ -65,8 +115,6 @@ export default function MainPage(){
 
     const [hovered, setHovered] = useState(false);
 
-    const navigate = useNavigate();
-
     const handleClick = (value) => {
         console.log(`Redirected to ${value}`);
         navigate(value);
@@ -97,6 +145,8 @@ export default function MainPage(){
             <button className='button-contained' onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onClick={() => handleClick("/textdec")}>
                 {hovered ? "Descubre más" : "Explorar"}
             </button>
+
+            <h6>{`Email: ${UserData.email}, Nombre: ${UserData.name}, Existe?: ${UserData.isLogged ? 'Si' : 'No'}`}</h6>
 
 
         <Container className='social-media'>
