@@ -24,7 +24,7 @@ function App() {
     <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/about" element={<About />} />
-      <Route path="/login" element={<Login name={UserData.name} email={UserData.email} isLogged={UserData.isLogged} password={UserData.password}/>} />
+      <Route path="/login"/>
       <Route path="/register" element={<Register/>} />
     </Routes>
   );
