@@ -4,10 +4,11 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
-import './Register.css'
+import styles from './Register.module.css'
 import UserData from '../../../userData.json'
 import Swal from "sweetalert2";
-import {useNavigate} from 'react-router-dom'
+import {data, useNavigate} from 'react-router-dom'
+import { Typography } from "@mui/material";
 
 
 export default function Register(){
@@ -44,8 +45,14 @@ export default function Register(){
     }
 
     return(
-        <div className='form-data'>
+        <div className={styles.formData}>
             <Box sx={{ width: 500, maxWidth: '100%' }}>
+            <h1 variant="h3" sx={{
+                textAlign:'center', 
+                marginBottom:'10px',
+                }} 
+                className={styles.text}
+                >Formulario de registro</h1>
                 
                 <TextField 
                     fullWidth 

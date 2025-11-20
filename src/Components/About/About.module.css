@@ -1,6 +1,7 @@
+
 .page {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
-    background: #000;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    background: #ffffff;
 }
 
 .page {
@@ -49,12 +50,12 @@
 }
 
 .textContainer {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background: rgba(199, 193, 193, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgb(101, 158, 211);
     padding: 40px;
     border-radius: 20px;
-    max-width: 900px;
+    max-width: 90%;
     text-align: center;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     animation: fadeIn 1.5s ease forwards;
@@ -73,27 +74,35 @@
 }
 
 .title {
-    color: #fff;
-    font-size: 1.4rem;
+    color: #ffffff;
+    font-size: 1.9rem;
     line-height: 1.8;
 }
 
 .star {
     position: absolute;
-    background: white;
+    background: rgb(0, 0, 0);
     border-radius: 50%;
     opacity: 0.6;
     pointer-events: none;
-    filter: drop-shadow(0 0 6px white);
+    filter: drop-shadow(0 0 6px rgb(0, 0, 0));
 }
 
 .shootingStar {
     position: absolute;
     width: 2px;
     height: 120px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(255,255,255,0));
     border-radius: 50%;
     opacity: 0;
     transform: rotate(45deg);
     pointer-events: none;
+}
+
+.registerbtn{
+ display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  height: 300px; 
+  background-color: antiquewhite;
 }

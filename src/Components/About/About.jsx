@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 import styles from './About.module.css';
 import gsap from 'gsap';
+import {useNavigate} from 'react-router-dom'
 
 export default function About() {
 
@@ -10,14 +13,14 @@ export default function About() {
     const container = starsRef.current;
     if (!container) return;
 
-    const totalStars = 120;
-    const colors = ["#ffffff", "#b3e5ff", "#c1c8ff", "#d9e1ff"]; 
+    const totalStars = 200;
+    const colors = ["#000000ff", "#242424ff", "#000000ff", "#000000ff"]; 
 
     for (let i = 0; i < totalStars; i++) {
         const star = document.createElement("div");
 
-        const size = Math.random() * 3 + 1;
-        const depth = Math.random() * 3 + 1;
+        const size = Math.random() * 5 + 1;
+        const depth = Math.random() * 5 + 1;
         const color = colors[Math.floor(Math.random() * colors.length)];
 
         star.classList.add(styles.star);
@@ -88,6 +91,12 @@ export default function About() {
     };
     }, []);
 
+    const navigate = useNavigate();
+    const handleClick = (value) => {
+        console.log(`Redirected to ${value}`);
+        navigate(value);
+    }
+
     return (
         <div className={styles.page}>
 
@@ -98,6 +107,11 @@ export default function About() {
                     <h1 className={styles.title}>
                         Biosanación es un espacio dedicado al bienestar integral, donde exploramos la conexión entre mente, cuerpo y emociones. Aquí encontrarás reflexiones profundas sobre salud física y mental, así como enfoques complementarios que invitan al autoconocimiento y al equilibrio personal. Nuestro propósito es ofrecer contenido claro, respetuoso y orientado al crecimiento interior, para que cada persona pueda descubrir prácticas que contribuyan a una vida más consciente, serena y saludable.
                     </h1>
+               
+                        <div className="registerbtn">
+                            <Button variant="contained" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onClick={() => handleClick("/register")}>Registrarme</Button>
+                        </div>
+
                 </div>
             </div>
 

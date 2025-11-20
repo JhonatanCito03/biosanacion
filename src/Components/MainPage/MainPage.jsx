@@ -142,7 +142,7 @@ export default function MainPage(){
                 Donde te reencontrarás contigo mismo.
             </Typography>
             
-            <button className='button-contained' onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onClick={() => handleClick("/about")}>
+            <button className='button-contained'onClick={() => handleClick("/about")}>
                 {hovered ? "Descubre más" : "Explorar"}
             </button>
 
