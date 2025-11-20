@@ -1,6 +1,6 @@
 
 .page {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana;
     background: #ffffff;
 }
 
@@ -52,7 +52,7 @@
 .textContainer {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    background: rgb(101, 158, 211);
+    background: rgb(95, 188, 228);
     padding: 40px;
     border-radius: 20px;
     max-width: 90%;
@@ -60,6 +60,9 @@
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     animation: fadeIn 1.5s ease forwards;
     opacity: 0;
+}
+.textContainer:hover {
+    background: rgb(57, 179, 231);
 }
 
 @keyframes fadeIn {
@@ -75,7 +78,7 @@
 
 .title {
     color: #ffffff;
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     line-height: 1.8;
 }
 
