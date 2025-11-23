@@ -109,7 +109,7 @@ export default function About() {
                     </h1>
                
                         <div className="registerbtn">
-                            <Button variant="contained" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} onClick={() => handleClick("/register")}>Registrarme</Button>
+                            <Button variant="contained" onClick={() => handleClick("/register")}>Registrarme</Button>
                         </div>
 
                 </div>
