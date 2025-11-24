@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useInsertionEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import { SocialIcon } from 'react-social-icons'
 import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
@@ -10,11 +10,8 @@ import UserData from '../../../userData.json'
 
 
 
-export default function MainPage(){
 
-   useEffect(() => {
-    console.log(UserData.name, UserData.email, UserData.isLogged, )
-   })
+export default function MainPage(){
 
     const navigate = useNavigate();
 
@@ -51,14 +48,14 @@ export default function MainPage(){
 
 
     }else{
-    Swal.fire({
-        title: `Bienvenid@ ${UserData.name}`,
-        icon: "success",
-        text: "Sesión iniciada correctamente",
-        draggable: true
-    });
+        return(
+            Swal.fire({
+            title: `Bienvenid@ ${UserData.name}`,
+            icon: "Sesion iniciada correctamente",
+            draggable: true
+            })
+        )
     }
-
 
     }, [!UserData.isLogged, navigate]);
 
@@ -118,6 +115,10 @@ export default function MainPage(){
 
     const [hovered, setHovered] = useState(false);
 
+    const handleHover = () => {
+
+    }
+
     const handleClick = (value) => {
         console.log(`Redirected to ${value}`);
         navigate(value);
@@ -145,7 +146,10 @@ export default function MainPage(){
                 Donde te reencontrarás contigo mismo.
             </Typography>
             
-            <button className='button-contained'onClick={() => handleClick("/about")}>
+            <button className='button-contained'
+            onClick={() => handleClick("/about")} 
+            onMouseEnter={() => setHovered(true)} 
+            onMouseLeave={() => setHovered(false)}>
                 {hovered ? "Descubre más" : "Explorar"}
             </button>
 
@@ -164,3 +168,4 @@ export default function MainPage(){
     
     );
 }
+
