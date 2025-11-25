@@ -48,13 +48,11 @@ export default function MainPage(){
 
 
     }else{
-        return(
             Swal.fire({
             title: `Bienvenid@ ${UserData.name}`,
             icon: "Sesion iniciada correctamente",
             draggable: true
             })
-        )
     }
 
     }, [!UserData.isLogged, navigate]);
