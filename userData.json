@@ -2,5 +2,7 @@
   "name": "",
   "email": "",
   "isLogged": false,
-  "password": ""
+  "password": "",
+  "isVerified": false,
+  "token": ""
 }

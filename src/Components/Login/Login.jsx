@@ -42,16 +42,16 @@ export default function Login(){
     return data;
     }
 
-    //Pruebas conexion con spring boot (email)
-    async function enviarCorreoSpring(email) {
-    const res = await fetch("http://localhost:8080/api/users", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email })
-    });
+    // //Pruebas conexion con spring boot (email)
+    // async function enviarCorreoSpring(email) {
+    // const res = await fetch("http://localhost:8080/api/users", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify({ email })
+    // });
 
-    return await res.json();
-    }
+    // return await res.json();
+    // }
     
     return(
         <div className={styles.formData}>
@@ -93,17 +93,17 @@ export default function Login(){
                         if (resultado.valid) {
                             console.log("Acceso permitido:", resultado.usuario);
 
-                            // 1. Enviar correo desde Spring Boot
-                            try {
-                                const respuestaCorreo = await enviarCorreoSpring(email);
-                                console.log("Respuesta del backend de Spring:", respuestaCorreo);
+                            // // 1. Enviar correo desde Spring Boot
+                            // try {
+                            //     const respuestaCorreo = await enviarCorreoSpring(email);
+                            //     console.log("Respuesta del backend de Spring:", respuestaCorreo);
 
-                                if (respuestaCorreo.status !== "ok") {
-                                    console.warn("El correo no pudo enviarse:", respuestaCorreo);
-                                }
-                            } catch (error) {
-                                console.error("Error enviando correo:", error);
-                            }
+                            //     if (respuestaCorreo.status !== "ok") {
+                            //         console.warn("El correo no pudo enviarse:", respuestaCorreo);
+                            //     }
+                            // } catch (error) {
+                            //     console.error("Error enviando correo:", error);
+                            // }
 
                             // 2. Mostrar alerta
                             Swal.fire({
