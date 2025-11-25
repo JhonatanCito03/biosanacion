@@ -20,4 +20,5 @@ html, body, #root {
   background: #000;
   overflow-x: hidden; /* Solo ocultamos horizontal */
   overflow-y: hidden; /* Y verticial */
+  
 }
