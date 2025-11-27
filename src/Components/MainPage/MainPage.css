@@ -1,6 +1,5 @@
 body{
-background: linear-gradient(135deg, #91c5f3 0%, #97c7e3 50%, #91c5f3  100%);
-color: #ffffff;
+color: #000000;
 
 }
 
@@ -11,16 +10,13 @@ color: #ffffff;
   align-items: center;
   height: 100vh;
   text-align: center;
-  color: #3c3936;
+  color: #000000;
   overflow: hidden;
 }
 
 .main-text {
   font-size: 48px;
   font-weight: bold;
-  background: linear-gradient(90deg, #ffff, #ffffff);
-  -webkit-background-clip: text; /* hace que el fondo solo se vea en el texto */
-  -webkit-text-fill-color: transparent;
   font-family: "Playfair Display", serif;
   letter-spacing: 3px;
   font-weight: 700;

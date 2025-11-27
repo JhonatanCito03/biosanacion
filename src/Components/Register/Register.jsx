@@ -7,8 +7,7 @@ import Stack from '@mui/material/Stack';
 import styles from './Register.module.css'
 import UserData from '../../../userData.json'
 import Swal from "sweetalert2";
-import {data, useNavigate} from 'react-router-dom'
-import { Typography } from "@mui/material";
+import {useNavigate} from 'react-router-dom'
 
 
 export default function Register(){
@@ -108,7 +107,8 @@ export default function Register(){
 
     return(
         <div className={styles.formData}>
-            <Box sx={{ width: 500, maxWidth: '100%' }}>
+            <div className={styles.formRegister}>
+                <Box sx={{ width: 500, maxWidth: '100%' }}>
             <h1 variant="h3" sx={{
                 textAlign:'center', 
                 marginBottom:'10px',
@@ -141,7 +141,7 @@ export default function Register(){
                     id="password"
                     type='password'
                     sx={{marginTop:'10px'}}
-                    placeholder="Debe ser de + de 8 caracteres"
+                    placeholder="Al menos 8 caracteres"
                     value={password}
                     onChange={e => setPassword(e.target.value)}
                 />
@@ -151,6 +151,7 @@ export default function Register(){
                     label="Repetir contraseña" 
                     id="password2"
                     type='password'
+                    placeholder="Debe ser igual a la anterior"
                     sx={{marginTop:'10px'}}
                     value={password2}
                     onChange={e => setPassword2(e.target.value)}
@@ -161,7 +162,9 @@ export default function Register(){
                         Crear usuario
                     </Button>
                 </Stack>
-            </Box>
+                </Box>
+            </div>
+            
         </div>
     );
 }

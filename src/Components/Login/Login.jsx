@@ -55,7 +55,8 @@ export default function Login(){
     
     return(
         <div className={styles.formData}>
-            <Box sx={{ width: 500, maxWidth: '100%' }}>
+            <div className={styles.formLogin}>
+                <Box sx={{ width: 500, maxWidth: '100%' }}>
             <h1 variant="h3" sx={{
                 textAlign:'center', 
                 marginBottom:'10px',
@@ -64,6 +65,7 @@ export default function Login(){
                 >Inicio de sesión</h1>
            
                 <TextField 
+                className={styles.TextField}
                     fullWidth 
                     label="Su correo"
                     placeholder="example@gmail.com"
@@ -75,6 +77,7 @@ export default function Login(){
                 />
 
                 <TextField 
+                className={styles.TextField}
                     fullWidth 
                     label="Contraseña"
                     placeholder='Ingrese su sontraseña'
@@ -137,6 +140,7 @@ export default function Login(){
                 </Stack>
 
             </Box>
+            </div>
         </div>
     );
 }

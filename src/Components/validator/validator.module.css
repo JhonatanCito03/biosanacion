@@ -1,0 +1,75 @@
+.inputToken {
+  width: 90%;
+
+  padding: 12px 16px;
+  margin-bottom: 10px;
+
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.85);
+
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* Cuando el usuario hace click */
+.inputToken:focus {
+  border-color: #007bff; /* azul suave */
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.35);
+}
+
+/* Placeholder más suave */
+.inputToken::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+  font-style: italic;
+}
+
+/* Efecto cuando está deshabilitado */
+.inputToken:disabled {
+  background: rgba(200, 200, 200, 0.3);
+  cursor: not-allowed;
+}
+
+
+.btnVerified {
+    width: 90%;
+  padding: 12px 20px;
+  margin-top: 2px;
+
+  background-color: #007bff; /* azul suave */
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.btnVerified:hover {
+  background-color: #0066d6; /* un poco más oscuro */
+  transform: translateY(-2px);
+}
+
+/* Efecto al click */
+.btnVerified:active {
+  transform: scale(0.98);
+}
+
+/* Cuando el botón está deshabilitado */
+.btnVerified:disabled {
+  background-color: #a8a8a8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form{
+    display: grid;
+    justify-content: center;
+}
