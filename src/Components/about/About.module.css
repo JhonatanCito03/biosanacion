@@ -1,0 +1,68 @@
+.aboutUs{
+display: flex;
+flex-direction: column;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 10px;                
+  left: 50%;              
+  transform: translateX(-50%); 
+  
+  display: flex;
+  gap: 10px;               
+  z-index: 1000;
+  
+}
+
+
+
+.whoweare{
+    margin-top: 35vh !important;  
+}
+
+
+.mision{
+    margin-top: 40vh !important;  
+}
+
+
+.vision{
+    margin-top: 60vh !important;  
+}
+.publico{
+    margin-top: 60vh !important; 
+    margin-bottom: 60vh !important; 
+}
+
+
+
+.aboutUs{
+display: flex;
+flex-direction: column;
+}
+
+.h1{
+    margin-left: 10px !important;
+}
+
+
+.h1Lower{
+    margin-top: 50px !important;
+    margin-left: 10px !important;
+}
+
+.h3 {
+  color: #4a4a4a;
+  font-weight: 600;
+  margin-top: 60px !important;
+  margin-left: 90px !important;
+}
+
+
+.h3Lower {
+  color: #4a4a4a;
+  font-weight: 600;
+  margin-top: 60px !important;
+  margin-left: 90px !important;
+}
