@@ -1,94 +1,56 @@
-import styles from './About.module.css'
-import { Typography, Button } from '@mui/material';
-import {useRef} from 'react';
-
-export default function About(){
-
-    const whoRef = useRef(null);
-    const misionRef = useRef(null);
-    const visionRef = useRef(null);
-    const publicoRef = useRef(null);
+import styles from './About.module.css';
+import image1 from '../../assets/each-page-image/image-tarro.jpeg';
+import caras from '../../assets/each-page-image/caras.jpeg';
 
 
-    const goTo = (ref) => {
-        ref.current?.scrollIntoView({ behavior: 'smooth' });
-    };
+export default function About() {
+    return (
+        <div className="globalContent">
 
-
-    return(
-    <div className='container' >
-        <div className={styles.aboutUs}>
-
-        <div className={styles.buttons}>
-            <Button variant="contained" color="secondary" onClick={() => goTo(whoRef)} sx={{marginRight:'10px', padding: '6px', fontSize: '12px'}}>Ir a "¿Quiénes somos?"</Button>
-            <Button variant="contained" color="secondary" onClick={() => goTo(misionRef)} sx={{marginRight:'10px', padding: '6px', fontSize: '12px'}}>Ir a "Nuestra misión"</Button>
-            <Button variant="contained" color="secondary" onClick={() => goTo(visionRef)} sx={{marginRight:'10px', padding: '6px', fontSize: '12px'}}>Ir a "Nuestra visión"</Button>
-            <Button variant="contained" color="secondary" onClick={() => goTo(publicoRef)} sx={{marginRight:'10px', padding: '6px', fontSize: '12px'}}>Ir a "Público objetivo"</Button>
-        </div>
-            
-
-            <div ref={whoRef} className={styles.whoweare}>
-                <Typography variant="h1" component="h1" className={styles.h1}>
-                    ¿Quiénes somos?
-                </Typography>
-
-                <Typography variant="h3" component="h3" className={styles.h3}>
-                    -> Somos una organización dedicada 
-                    a orientar personas hacía la trascendencia
-                    espiritual y material.
-                </Typography>
+        <div className={styles.aboutContainer}>
+            <img src={image1} alt="Imagen de referencia" className={styles.image1}/>
+            <div className={styles.maintextContainer}>
+                <h1 className={styles.aboutTitle}>¿Qué es Biosanación?</h1>
+                <p>Biosanación es un espacio de acompañamiento integral donde cuerpo, mente y emoción se entienden como un sistema interconectado.
+                <br />
+                <br />
+                Trabajamos desde la homeopatía y la inteligencia emocional para ayudarte a comprender el origen profundo de tus desequilibrios y recuperar tu bienestar de forma consciente.</p>
             </div>
-            
+        </div> 
 
+        <div className={styles.visionContainer} style={{marginTop:'20px'}}>
+            <h1 className="poppins-medium" style={{justifyContent:'center', textAlign:'center'}}>Nuestra Vision</h1>
 
-        <div ref={misionRef} className={styles.mision}>
-            <Typography variant="h1" component="h1" className={styles.h1Lower}>
-                Nuestra misión
-            </Typography>
+            <div className={styles.dialogues}>
 
-            <Typography variant="h3" component="h3" className={styles.h3Lower}>
-                -> Acompañar a nuestros usuarios 
-                    en el camino de la reconexión
-                    y el autoconocimiento, mediante la reflexión
-                    y el uso de la homeopatía 
-                    y la medicina tradicional china
-                    como métodos de sanación y transformación.
-            </Typography>
+                <div className={styles.aboutCard}>
+                    <div style={{display:'flex', textAlign:'center', alignItems:'center', justifyContent:'center'}}>
+                        <img src={caras} style={{width:'110px', height:'110px'}} alt="" />
+                        <h3>Acompanamiento en Homeopatia</h3>
+                    </div>
+                    
+                    <p>La homeopatía trabaja estimulando la capacidad natural del organismo para recuperar su equilibrio.
+                    No se trata solo de lo físico, sino de comprender cómo los estados emocionales, el estrés y la <b>historia personal</b> influyen en la salud.</p>
+                    <u style={{fontSize:'10px',display:'flex', textAlign:'center'}}>En Biosanación utilizamos la homeopatía como una herramienta de regulación profunda, respetuosa y personalizada.</u>
+                </div>
+
+                <div className={styles.aboutCard}>
+                    <div style={{display:'flex', textAlign:'center', alignItems:'center', justifyContent:'center'}}>
+                        <img src={caras} style={{width:'110px', height:'110px'}} alt="" />
+                        <h3>Desarrollo de Inteligencia Emocional</h3>
+                    </div>
+                    
+                    <p>Las emociones no gestionadas impactan directamente en la salud, las decisiones y las relaciones.
+                    Acompañamos procesos para aprender a reconocer, comprender y regular el mundo emocional, fortaleciendo la autoconciencia y la estabilidad interna.</p>
+                    <u style={{fontSize:'10px',display:'flex', textAlign:'center'}}>En Aquí no se juzga, se observa, se comprende y se transforma.</u>
+                </div>
+
+            </div>
+
         </div>
-            
 
 
-        <div ref={visionRef} className={styles.vision}>
-            <Typography variant="h1" component="h1" className={styles.h1Lower}>
-                    Nuestra Visión
-                </Typography>
-
-                <Typography variant="h3" component="h3" className={styles.h3Lower}>
-                    -> Impulsar las vidas de nuestros usuarios brindándoles
-                        acompañamiento, planes de acción y conocimiento
-                        que les permitan sanar; trascender a sus 
-                        propias condiciones y alcanzar el punto deseado 
-                        en sus vidas 
-            </Typography>
-        </div>
-            
-
-
-        <div ref={publicoRef} className={styles.publico}>
-            <Typography variant="h1" component="h1" className={styles.h1Lower}>
-                Público Objetivo
-            </Typography>
-
-            <Typography variant="h3" component="h3" className={styles.h3Lower}>
-                -> Personas que desean hacerse conscientes
-                    de sus propios patrones y estilos de vida
-                    disfuncionales y desean trabajar en ellos
-                    para trascender.
-            </Typography>
-        </div>
-            
         </div>
         
-    </div>
-    );    
+    );
 }
